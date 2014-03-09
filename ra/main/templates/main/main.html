@@ -30,13 +30,14 @@ margin-bottom: 19px;
         <div class="navbar-collapse collapse">
 {% block nav_elements %}
 <ul class="nav navbar-nav">
+  {% include "main/nav.html" %}
 </ul>
 {% endblock %}
 	</div>
       </div>
     </div>
   <div id="content" class="container">
-{% block contentes %}Error 418 I am a teapot{% endblock %}
+{% block content %}Error 418 I am a teapot{% endblock %}
   </div>
 </body>
 </html>
