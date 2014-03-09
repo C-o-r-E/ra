@@ -1,0 +1,40 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Markdown Viewer</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="{% static "css/bootstrap.css" %}" />
+  <script type="text/javascript" src="{% static "js/jquery.js" %}"></script>
+  <script type="text/javascript" src="{% static "js/bootstrap.js" %}"></script>
+  <script type="text/javascript">
+    </script>
+  <style type="text/css">
+.navbar-static-top {
+margin-bottom: 19px;
+}
+</style>
+</head>
+<body>
+  <div class="navbar navbar-inverse navbar-static-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	  <span class="sr-only">Toggle navigation</span>
+	  <span class="icon-bar"></span>
+	  <span class="icon-bar"></span>
+	  <span class="icon-bar"></span>
+	  </button>
+	</div>
+      <div class="navbar-collapse collapse">
+	{% block nav_elements %} NAV ELEMENTS {% endblock %}
+	</div>
+      </div>
+    </div>
+  <div id="content" class="container">
+     {% block contentes %} CONTENT ELEMENTS {% endblock %}
+    </div>
+</body>
+</html>

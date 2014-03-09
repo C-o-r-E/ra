@@ -1,0 +1,28 @@
+<html>
+  <h1>Inventory list</h1>
+
+
+  {% if item_list %}
+  <table>
+    <thead>
+      <tr>
+	<th>ID</th>
+	<th>Category</th>
+	<th>name</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for itm in item_list %}
+      <tr>
+	<td>{{itm.pk}}</td>
+	<td>{{itm.category}}</td>
+	<td><a href="item/{{itm.id}}">{{itm.name}}</a></td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% else %}
+  No items...
+  {% endif %}
+  
+</html>
