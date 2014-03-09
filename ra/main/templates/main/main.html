@@ -1,9 +1,7 @@
-{% load staticfiles %}
-
-<!DOCTYPE html>
+{% load staticfiles %}<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <title>Markdown Viewer</title>
+  <title>Helios Makerspace</title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" type="text/css" href="{% static "css/bootstrap.css" %}" />
@@ -21,20 +19,24 @@ margin-bottom: 19px;
   <div class="navbar navbar-inverse navbar-static-top" role="navigation">
     <div class="container">
       <div class="navbar-header">
+        <a class="navbar-brand" href="?">Helios Makerspace</a>
 	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
 	  <span class="sr-only">Toggle navigation</span>
 	  <span class="icon-bar"></span>
 	  <span class="icon-bar"></span>
 	  <span class="icon-bar"></span>
-	  </button>
+	</button>
 	</div>
-      <div class="navbar-collapse collapse">
-	{% block nav_elements %} NAV ELEMENTS {% endblock %}
+        <div class="navbar-collapse collapse">
+{% block nav_elements %}
+<ul class="nav navbar-nav">
+</ul>
+{% endblock %}
 	</div>
       </div>
     </div>
   <div id="content" class="container">
-     {% block contentes %} CONTENT ELEMENTS {% endblock %}
-    </div>
+{% block contentes %}Error 418 I am a teapot{% endblock %}
+  </div>
 </body>
 </html>
