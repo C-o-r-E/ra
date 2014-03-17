@@ -1,7 +1,14 @@
 from django.shortcuts import render
 
+def usr_login(request):
+    if request.user.is_authenticated():
+        return render(request, 'main/login.html', {'err':'You are already logged in!'})
+    else:
+        return render(request, 'main/login.html', {})
+        
+
 def mainSite(response):
-    return render(response, 'main/main.html', {})
+    return render(response, 'main/home.html', {})
 
 def about(response):
     return render(response, 'main/about.html', {})
