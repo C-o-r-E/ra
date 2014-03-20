@@ -23,7 +23,7 @@
     $("#do_en").click(go_en);
     $("#do_fr").click(go_fr);
 
-    if (document.cookie.matches(/lang_pref=en/)) {
+    if (document.cookie.match(/lang_pref=en/)) {
       go_en();
     } else {
       go_fr();
@@ -54,7 +54,7 @@
   {% include "main/nav.html" %}
 </ul>
 {% endblock %}
-	  <ul class="nav navbar-nav">
+	  <ul class="nav navbar-nav navbar-right">
 	    <li lang="fr"><a href="#" id="do_en">English</a></li>
 	    <li lang="en"><a href="#" id="do_fr">Fran&ccedil;ais</a></li>
 	  </ul>
