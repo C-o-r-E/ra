@@ -6,15 +6,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" type="text/css" href="{% static "css/bootstrap.css" %}" />
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<!--  <script type="text/javascript" src="{% static "js/jquery.js" %}"></script>-->
   <script type="text/javascript" src="{% static "js/bootstrap.js" %}"></script>
-  <script type="text/javascript">
-    </script>
+  <script lang="javascript">
+  $(function() {
+    function go_en() {
+      $(":lang(en)").show();
+      $(":lang(fr)").hide();
+      document.cookie = "lang_pref=en; expires=Wed, 07 Sep 2039 11:47:35 GMT; path=/"
+    }
+    function go_fr() {
+      $(":lang(en)").hide();
+      $(":lang(fr)").show();
+      document.cookie = "lang_pref=fr; expires=Wed, 07 Sep 2039 11:47:35 GMT; path=/"
+    }
+
+    $("#do_en").click(go_en);
+    $("#do_fr").click(go_fr);
+
+    if (document.cookie.matches(/lang_pref=en/)) {
+      go_en();
+    } else {
+      go_fr();
+    }
+  });
+  </script>
   <style type="text/css">
-.navbar-static-top {
-margin-bottom: 19px;
-}
-</style>
+  .navbar-static-top {
+  margin-bottom: 19px;
+  }
+  </style>
 </head>
 <body>
   <div class="navbar navbar-inverse navbar-static-top" role="navigation">
@@ -34,6 +54,10 @@ margin-bottom: 19px;
   {% include "main/nav.html" %}
 </ul>
 {% endblock %}
+	  <ul class="nav navbar-nav">
+	    <li lang="fr"><a href="#" id="do_en">English</a></li>
+	    <li lang="en"><a href="#" id="do_fr">Fran&ccedil;ais</a></li>
+	  </ul>
 	</div>
       </div>
     </div>

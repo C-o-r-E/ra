@@ -2,20 +2,6 @@
 {% load staticfiles %}
 {% block content %}
 
-<script lang="javascript">
-
-$(function() {
-        $("#do_en").click(function() {
-                $(":lang(en)").show();
-                $(":lang(fr)").hide();
-        });
-        $("#do_fr").click(function() {
-                $(":lang(en)").hide();
-                $(":lang(fr)").show();
-        });
-});
-
-</script>
 <div class="well">
 <div class="row">
 <div class="col-sm-6">
@@ -25,12 +11,7 @@ $(function() {
     <div class="visible-lg"><img src="{% static 'img/logo-lg.png' %}" alt="Helios Makerspace (lg)" /></div>
 </div>
 <div class="col-sm-6">
-
-  <button type="button" id="do_en">EN</button>
-  <button type="button" id="do_fr">FR</button>
-
     <h2 lang="en">Our Services</h2>
-    <h2 lang="fr">Nos Services</h2>
     <ul lang="en">
         <li>Access to a 3D printer, the MakerGear M2 [by end of March].</li>
         <li>Access to a wood workshop for cutting, drilling, sanding wood.</li>
@@ -39,6 +20,7 @@ $(function() {
         <li>Access to free WIFI. You can just come hang out, program, browse the internet.</li>
         <li>It&#39;s really a community space that happens to have awesome tools.</li>
     </ul>
+    <h2 lang="fr">Nos Services</h2>
     <ul lang="fr">
         <li>Accès à une imprimante 3D, la MakerGear M2 [fin Mars].</li>
         <li>Accès à un atelier de bois pour la coupe, perçage et sablage du bois.</li>
