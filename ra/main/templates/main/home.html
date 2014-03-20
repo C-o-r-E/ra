@@ -47,16 +47,19 @@ $(function() {
         <li>Accès à WIFI gratuit. On peut venir et juste jaser, programmer, naviguer l'internet.</li>
         <li>C'est en fait un espace communautaire équipé avec une variété d'outils super utiles.</li>
     </ul>
-    <h2>Membership Rate</h2>
-    <p>50.00$/month</p>
-    <p>Our mission is to provide access to the community to a space and tools. You can be an artist, a student, a hobbyist, an entrepreneur, everybody is welcome to become a member.</p>
+    <h2 lang="en">Membership Rate</h2>
+    <h2 lang="fr">Devenir Membre</h2>
+    <p lang="en">50.00$/month</p>
+    <p lang="fr">50.00$/mois</p>
+    <p lang="en">Our mission is to provide access to the community to a space and tools. You can be an artist, a student, a hobbyist, an entrepreneur, everybody is welcome to become a member.</p>
+    <p lang="fr">Notre mission est de donner l'accès à la communauté à un espace et des outils. Un membre peut être un artiste, un étudiant, un hobbyiste, un entrepreneur; c'est vraiment un espace ouvert à tous!</p>
 
 </div>
 </div>
 </div>
 
 <div class="row">
-<div class="col-md-2">
+<div lang="en" class="col-md-2">
     <h3>More Info</h3>
 
     <div>Tools List and Workshop</div>
@@ -65,7 +68,17 @@ $(function() {
     <div>Map &amp; Address</div>
     <div>Blog</div>
 </div>
-<div class="col-md-2">
+    <div lang="fr" class="col-md-2">
+    <h3>Plus d'Info</h3>
+
+    <div>L'atelier et les Outils</div>
+    <div>Horaire</div>
+    <div>Être Membre</div>
+    <div>Carte &amp; Adresse</div>
+    <div>Blog</div>
+</div>
+    
+<div lang="en" class="col-md-2">
     <h3>Hours</h3>
 
     <div>Wednesday: 1PM-9PM</div>
@@ -75,9 +88,21 @@ $(function() {
     <h4>Community Night</h4>
     <div>Thursday 4PM-9PM (Free)</div>
 </div>
-<div class="col-md-2">
-    <h3>Follow Us</h3>
+    <div lang="fr" class="col-md-2">
+    <h3>Horaire</h3>
 
+    <div>Mercredi : 13h-21h</div>
+    <div>Jeudi: 13h-21h</div>
+    <div>Vendredi: 14h-21h</div>
+    <div>Samedi: 13h-20h</div>
+    <h4>Soirée Communautaire</h4>
+    <div>Jeudi 16h-21h (Gratuit)</div>
+</div>
+    
+<div class="col-md-2">
+    <h3 lang="en">Follow Us</h3>
+    <h3 lang="fr">Nous Suivre</h3>
+    
     <div>Facebook</div>
     <div>Youtube</div>
     <div>Google+</div>
@@ -85,7 +110,8 @@ $(function() {
     <div>IRC</div>
 </div>
 <div class="col-md-2">
-    <h3>Contact</h3>
+    <h3 lang="en">Contact</h3>
+    <h3 lang="fr">Nous Contacter</h3>
 
     <div>info@heliospace.ca</div>
     <div>4035 Saint-Ambroise</div>
@@ -94,7 +120,7 @@ $(function() {
     <div>Canada</div>
     <div>(Metro Place-Saint-Henri)</div>
 </div>
-<div class="col-md-4">
+<div lang="en"class="col-md-4">
     <h3>Newsletter</h3>
 
     <form action="http://heliospace.us7.list-manage.com/subscribe/post?u=1905f8d3301878e38c708d44a&amp;id=775d18aa4f" method="post">
@@ -103,24 +129,40 @@ $(function() {
     </form>
 
 </div>
+
+<div lang="fr"class="col-md-4">
+    <h3>Bulletin</h3>
+
+    <form action="http://heliospace.us7.list-manage.com/subscribe/post?u=1905f8d3301878e38c708d44a&amp;id=775d18aa4f" method="post">
+    <p><input name="EMAIL" type="email" class="form-control input" placeholder="Courriel"></p>
+    <p><input id="mc-embedded-subscribe" class="form-control btn btn-primary" name="subscribe" value="S'inscrire au Bulletin" type="submit"></p>
+    </form>
+
+</div>
+
+
 </div>
 
 <p></hr> </p>
 <div class="row">
 <div class="col-md-3">
-    <h3>Workshop</h3>
+    <h3 lang="en">Workshop</h3>
+    <h3 lang="fr">L'atelier</h3>
     <p><img src="{% static 'img/home-thumb1.png' %}" alt="Workshop" width="200" height="150" /></p>
 </div>
 <div class="col-md-3">
-    <h3>Tools</h3>
+    <h3 lang="en">Tools</h3>
+    <h3 lang="fr">Outils</h3>
     <p><img src="{% static 'img/home-thumb2.png' %}" alt="Tools" width="200" height="150" /></p>
 </div>
 <div class="col-md-3">
-    <h3>Electronics Lab</h3>
+    <h3 lang="en">Electronics Lab</h3>
+    <h3 lang="fr">Labo Electronique</h3>
     <p><img src="{% static 'img/home-thumb3.png' %}" alt="Lab" width="200" height="150" /></p>
 </div>
 <div class="col-md-3">
-    <h3>Workspace</h3>
+    <h3 lang="en">Workspace</h3>
+    <h3 lang="fr">Espace de Travail</h3>
     <p><img src="{% static 'img/home-thumb4.png' %}" alt="Workspace" width="200" height="150" /></p>
 </div>
 </div>
