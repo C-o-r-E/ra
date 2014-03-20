@@ -8,8 +8,14 @@ class InventoryItem(models.Model):
     last_updated = models.DateTimeField()
     description = models.CharField(max_length=200)
 
+    def __unicode__(self):
+        return self.name
+
 class InventoryEvent(models.Model):
     item = models.ForeignKey(InventoryItem)
     description = models.CharField(max_length=200)
     date = models.DateTimeField()
     location = models.CharField(max_length=200)
+
+    def __unicode__(self):
+        return "Event:" + self.date

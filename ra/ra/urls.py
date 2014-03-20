@@ -18,6 +18,7 @@ urlpatterns = patterns('',
                        url(r'^contact/$', views.contact, name='contactPage'),
                        #url(r'^$', include('main.urls')),
                        url(r'^inventory/', include('inventory.urls')),
-                       url(r'^admin/', include(admin.site.urls)),
+                       url(r'^boss/', include(admin.site.urls)),
+                       url(r'^login/', views.usr_login, name="userLogin"),
 )
 

@@ -1,6 +1,21 @@
 {% extends "main/main.html" %}
-
+{% load staticfiles %}
 {% block content %}
+
+<script lang="javascript">
+
+$(function() {
+        $("#do_en").click(function() {
+                $(":lang(en)").show();
+                $(":lang(fr)").hide();
+        });
+        $("#do_fr").click(function() {
+                $(":lang(en)").hide();
+                $(":lang(fr)").show();
+        });
+});
+
+</script>
 <div class="well">
 <div class="row">
 <div class="col-sm-6">
@@ -11,8 +26,20 @@
 </div>
 <div class="col-sm-6">
 
-    <h2>Our Services</h2>
-    <ul>
+  <button type="button" id="do_en">EN</button>
+  <button type="button" id="do_fr">FR</button>
+
+    <h2 lang="en">Our Services</h2>
+    <h2 lang="fr">Nos Services</h2>
+    <ul lang="en">
+        <li>Access to a 3D printer, the MakerGear M2 [by end of March].</li>
+        <li>Access to a wood workshop for cutting, drilling, sanding wood.</li>
+        <li>Access to an electronic lab for building, soldering, debugging circuits.</li>
+        <li>Access to a work space surrounded by makers and awesome projects.</li>
+        <li>Access to free WIFI. You can just come hang out, program, browse the internet.</li>
+        <li>It&#39;s really a community space that happens to have awesome tools.</li>
+    </ul>
+    <ul lang="fr">
         <li>Access to a 3D printer, the MakerGear M2 [by end of March].</li>
         <li>Access to a wood workshop for cutting, drilling, sanding wood.</li>
         <li>Access to an electronic lab for building, soldering, debugging circuits.</li>

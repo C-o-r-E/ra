@@ -1,8 +1,32 @@
-<html>
+{% extends "main/main.html" %}
+{% load staticfiles %}
+{% block content %}
 
-serial = {{item.serial}}
-name = {{item.name}}
-category = {{item.category}}
-description = {{item.description}}
+<h1>{{item.name}}</h1>
 
-</html>
+
+<table class="table table-condensed table-hover">
+  <thead>
+    <tr>
+      <th>Tag</th>
+      <th>Data</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Serial Number</td>
+      <td>{{item.serial_number}}</td>
+    </tr>
+    <tr>
+      <td>Category</td>
+      <td>{{item.category}}</td>
+    </tr>
+    <tr>
+      <td>Description</td>
+      <td>{{item.description}}</td>
+    </tr>
+  </tbody>
+</table>
+
+{% endblock %}
+
