@@ -1,11 +1,11 @@
 {% extends "main/main.html" %}
 {% load staticfiles %}
 {% block content %}
-<h1 lang="en" id="membership">Membership</h1>
-<h1 lang="fr" id="membership">Tarif de Membres</h1>
-<h2 lang="en" id="rates">Rates</h2>
-<h2 lang="fr" id="rates">Tarifs</h2>
-<table>
+<h1 lang="en">Membership</h1>
+<h1 lang="fr">Tarif de Membres</h1>
+<h2 lang="en">Rates</h2>
+<h2 lang="fr">Tarifs</h2>
+<table class="table table-condensed">
     <thead>
         <tr>
             <th lang="en">Type</th>
@@ -22,36 +22,56 @@
             <td lang="fr">50.00$/mois</td>
         </tr>
         <tr>
-            <td>Student Membership</td>
+            <td lang="en">Student Membership</td>
+            <td lang="fr">Tarif Étudiant</td>
             <td>TBD</td>
         </tr>
         <tr>
-            <td>Regular Membership</td>
+            <td lang="en">Regular Membership</td>
+            <td lang="fr">Tarif Ordinaire</td>
             <td>TBD</td>
         </tr>
     </tbody>
 </table>
-<p><strong>*</strong> As we continue to build Helios, we would like offer a discounted membership rate for early adopters. The first members of any community have a major influence in how it develops and we would like to give props for that. As we become better equipped and have our grand opening pricing will be revisited. (see Schedule).</p>
-<h2 id="how-do-i-get-a-membership">How do I get a membership</h2>
-<p>Simply show up during any of our opening hours (see <a href="schedule.md">Schedule</a>) and it will be our pleasure to walk you through the process.</p>
-<h2 id="why-become-a-member">Why become a member</h2>
-<p>Membership helps the makerspace be sustainable. With your contribution, it helps us pay the rent, the internet, repairing and purchasing tools.</p>
-<p>It also gives you access during the week to the workshop.</p>
-<p>Being a member also means that you can decide the direction where the makerspace is going. Thus, every member have a voting right during general assembly and annual assembly.</p>
-<p>And of course, as a member, you get to use the tools and equipment in the workshop. To be extra safe, some equipment require an introduction before a member can use it.</p>
-<h3 id="this-includes-">This includes:</h3>
+<p lang="en"><strong>*</strong> As we continue to build Helios, we would like offer a discounted membership rate for early adopters. The first members of any community have a major influence in how it develops and we would like to give props for that. As we become better equipped and have our grand opening pricing will be revisited. (see Schedule).</p>
+<h2 lang="en">How do I get a membership</h2>
+<h2 lang="fr">Comment puis-je obtenir une adhésion de membre</h2>
+<p lang="en">Simply show up during any of our opening hours (see <a href="{% url 'schedulePage' %}">Schedule</a>) and it will be our pleasure to walk you through the process.</p>
+<p lang="fr">Présentez-vous simplement durant l'une de nos heures d'ouvertures (voir <a href="{% url 'schedulePage' %}">l'horaire</a>) et il nous fera plaisir de vous guider à travers le processus.</p>
+<h2 lang="en">Why become a member</h2>
+<h2 lang="fr">Pourquoi devenir un membre</h2>
+<div lang="en">
+    <p>Membership helps the makerspace be sustainable. With your contribution, it helps us pay the rent, the internet, repairing and purchasing tools.</p>
+    <p>It also gives you access during the week to the workshop.</p>
+    <p>Being a member also means that you can decide the direction where the makerspace is going. Thus, every member have a voting right during general assembly and annual assembly.</p>
+    <p>And of course, as a member, you get to use the tools and equipment in the workshop. To be extra safe, some equipment require an introduction before a member can use it.</p>
+</div>
+<div lang="fr">
+    <p>L'adhésion permet à au «Makerspace» d'être durable. Avec à votre contribution, vous aidez à payer le loyer, l'internet, la réparation et l'achat d'outils. </p>
+    <p>Être membre signifie également que vous pouvez décider de la direction que prend le «Makerspace». Ainsi, chaque membre possède un droit de vote lors de l'assemblée générale et l'assemblée annuelle. </p>
+    <p>Et bien sûr, en tant que membre, vous aurez accès aux outils et aux équipements de l'atelier. Pour plus de sécurités, certains équipements nécessitent une introduction avant qu'un membre puisse l'utiliser. </p>
+</div>
+<h3 lang="en">This includes:</h3>
+<h3 lang="en">Cela comprend:</h3>
 <ul>
-<li><strong>Power tools</strong>: table saw, chop saw, drill press, grinder</li>
-<li><strong>Handheld tools</strong>: drill, sander, orbital sander, dremel</li>
-<li><strong>Electronics</strong>: oscilloscope, signal generator, computers</li>
-<li>And many more things that we didn&#39;t list (like a fridge, free Wi-Fi, electronics parts, wood, etc...)</li>
+    <li lang="en">All of our <a href="{% url 'inventoryList' %}">Tools & Equipment</a></li>
+    <li lang="fr">Tous de nos <a href="{% url 'inventoryList' %}">Outils & Équipement</a></li>
+    <li lang="en">And many more things that we didn&#39;t list (like a fridge, free Wi-Fi, electronics parts, wood, etc...)</li>
+    <li lang="fr">Et beaucoup plus de choses dont nous n'avons pas de liste (comme le réfrigérateur, Wifi, les pièces électroniques, le bois, etc)</li>
 </ul>
-<h2 id="basic-code-of-conduct">Basic Code of Conduct</h2>
-<ol>
-<li>Maintain a safe environment for all members</li>
-<li>Clean after you are done</li>
-<li>Use reasonably the resources in the space</li>
-<li>Respect the volunteers, staff, members and guests of the makerspace</li>
+<h2 lang="en">Basic Code of Conduct</h2>
+<h2 lang-"fr">Code de conduite</h2>
+<ol lang="en">
+    <li>Maintain a safe environment for all members</li>
+    <li>Clean after you are done</li>
+    <li>Use reasonably the resources in the space</li>
+    <li>Respect the volunteers, staff, members and guests of the makerspace</li>
+</ol>
+<ol lang="fr">
+    <li>Maintenir un environnement sécuritaire pour tous les membres.</li>
+    <li>Nettoyer après avoir terminé l'utilisation des équipements.</li>
+    <li>Utilisez raisonnablement les ressources dans l'espace. </li>
+    <li>Respecter les bénévoles, le personnel, les membres et les invités du «Makerspace».</li>
 </ol>
 
 {% endblock %}
