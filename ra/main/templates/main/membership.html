@@ -1,29 +1,35 @@
 {% extends "main/main.html" %}
 {% load staticfiles %}
 {% block content %}
-<h1 id="membership">Membership</h1>
-<h2 id="rates">Rates</h2>
+<h1 lang="en" id="membership">Membership</h1>
+<h1 lang="fr" id="membership">Tarif de Membres</h1>
+<h2 lang="en" id="rates">Rates</h2>
+<h2 lang="fr" id="rates">Tarifs</h2>
 <table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Rate</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Beta-phase Membership<strong>*</strong></td>
-<td>50.00$/month</td>
-</tr>
-<tr>
-<td>Student Membership</td>
-<td>TBD</td>
-</tr>
-<tr>
-<td>Regular Membership</td>
-<td>TBD</td>
-</tr>
-</tbody>
+    <thead>
+        <tr>
+            <th lang="en">Type</th>
+            <th lang="en">Rate</th>
+            <th lang="fr">Passe</th>
+            <th lang="fr">Prix</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td lang="en">Beta-phase Membership<strong>*</strong></td>
+            <td lang="en">50.00$/month</td>
+            <td lang="fr">Tarif Phase-Beta<strong>*</strong></td>
+            <td lang="fr">50.00$/mois</td>
+        </tr>
+        <tr>
+            <td>Student Membership</td>
+            <td>TBD</td>
+        </tr>
+        <tr>
+            <td>Regular Membership</td>
+            <td>TBD</td>
+        </tr>
+    </tbody>
 </table>
 <p><strong>*</strong> As we continue to build Helios, we would like offer a discounted membership rate for early adopters. The first members of any community have a major influence in how it develops and we would like to give props for that. As we become better equipped and have our grand opening pricing will be revisited. (see Schedule).</p>
 <h2 id="how-do-i-get-a-membership">How do I get a membership</h2>

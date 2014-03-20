@@ -1,45 +1,23 @@
 {% extends "main/main.html" %}
 {% load staticfiles %}
 {% block content %}
-<h1 id="about-the-space">About the Space</h1>
-<h2 id="the-idea">The idea</h2>
-<p>Helios aims to provide the tools and facilities that can help people make things. We wanted to provide a place that won’t have bothered neighbors or family members when power tools are running. A place that is safe to work with heavy equipment and that can handle fumes/particles that would normally stink up your home.</p>
-<h2 id="the-location">The location</h2>
-<p>Helios is 5 minutes away from the Place Saint-Henri metro station at 137 Saint-Ferdinand. The space is industrially zoned with concrete floors and brick wall. This means we have less restrictions when it comes to noise and heavy equipment. We wanted to be sure that the location doesn&#39;t restrict the projects that can take place. For example, an ideal place for a welding station is next to the brick wall.</p>
-<h2 id="tools-list">Tools List</h2>
-<ul>
-<li>ATO Waveform Generator</li>
-<li>Abra PSU 30V 10A</li>
-<li>Compressor 30 Gallons</li>
-<li>Computers</li>
-<li>Craftman Jigsaw</li>
-<li>Craftman Orbital Sander</li>
-<li>Dewalt Drill</li>
-<li>Dewalt Jigsaw</li>
-<li>Electric Stapler</li>
-<li>Grinder</li>
-<li>HP Oscilloscope 60Mhz</li>
-<li>Heatgun Craftman</li>
-<li>Heatgun Generic</li>
-<li>Hot Glue</li>
-<li>Makita Drill</li>
-<li>Mastercraft Drillpress</li>
-<li>Milwaukee Miter Saw</li>
-<li>Phillips Oscilloscope 50Mhz</li>
-<li>Rigid Table Saw</li>
-<li>Ryobi Bandsaw</li>
-<li>Ryobi Belt Sander</li>
-<li>Sink</li>
-<li>Soldering Station</li>
-<li>Tektronix Oscilloscope 100Mhz</li>
-<li>Tools List</li>
-<li>Various Handtools</li>
-<li>Vice</li>
-<li>Waveform Generator</li>
-<li>Weller Soldering Station</li>
-</ul>
-<h1 id="about-the-team">About the Team</h1>
-<div class="row">
+<div lang="en">
+    <h1 id="about-the-space">About the Space</h1>
+    <h2 id="the-idea">The idea</h2>
+    <p>Helios aims to provide the tools and facilities that can help people make things. We wanted to provide a place that won’t have bothered neighbors or family members when power tools are running. A place that is safe to work with heavy equipment and that can handle fumes/particles that would normally stink up your home.</p>
+    <h2 id="the-location">The location</h2>
+    <p>Helios is 5 minutes away from the Place Saint-Henri metro station at 137 Saint-Ferdinand. The space is industrially zoned with concrete floors and brick wall. This means we have less restrictions when it comes to noise and heavy equipment. We wanted to be sure that the location doesn&#39;t restrict the projects that can take place. For example, an ideal place for a welding station is next to the brick wall.</p>
+</div>
+<div lang="fr">
+    <h1>À PROPOS</h1>
+    <h2>L'atelier</h2>
+    <p>Helios est situé à 5 minutes du métro Place Saint-Henri au 137 Saint-Ferdinand. C'est un espace industriel avec un plancher en béton et des murs de brique. Il y a moins de restriction concernant l'utilisation de machinerie lourde et bruyante. On voulait être certain que les projets de nos membres peuvent être complétés à Helios. Par exemple, l'endroit idéal pour la station de soudure à arc sera à côté du mur de brique.</p>
+</div>
+
+<h1 lang="en" id="about-the-team">About the Team</h1>
+<h1 lang="fr" id="about-the-team">Équipe</h1>
+
+<div lang="en" class="row">
     <div class="col-md-2">
         <h4>Lambert <small>Founder</small></h4>
         <p class="text-center"><img src="{% static 'img/founder-lambert.png' %}" alt="Lambert" width="120" height="150" /></p>
@@ -64,6 +42,35 @@
         <h4>Aaron <small>Co-Founder</small></h4>
         <p class="text-center"><img src="{% static 'img/founder-aaron.png' %}" alt="Aaron" width="120" height="150" /></p>
         <p>Aaron has a strange obsession with robotic actuators. As a matter of fact, he has a box of them.</p>
+    </div>
+    <div class="col-md-2"></div>
+</div>
+
+<div lang="fr" class="row">
+    <div class="col-md-2">
+        <h4>Lambert <small>Fondateur</small></h4>
+        <p class="text-center"><img src="{% static 'img/founder-lambert.png' %}" alt="Lambert" width="120" height="150" /></p>
+        <p>Lambert a une fascination inexplicable pour le popcorn et les boîtes à outils.</p>
+    </div>
+    <div class="col-md-2">
+        <h4>Corey <small>Co-Fondateur</small></h4>
+        <p class="text-center"><img src="{% static 'img/founder-corey.png' %}" alt="Corey" width="120" height="150" /></p>
+        <p>Corey a conclue qu'il y a une superposition de faits intéressants et moins pertinents.</p>
+    </div>
+    <div class="col-md-2">
+        <h4>Eric <small>Co-Fondateur</small></h4>
+        <p class="text-center"><img src="{% static 'img/founder-eric.png' %}" alt="Eric" width="120" height="150" /></p>
+        <p>Eric adorable les codes barres. Il va en mettre partout pour faire l'inventaire.</p>
+    </div>
+    <div class="col-md-2">
+        <h4>Alexandre <small>Co-Fondateur</small></h4>
+        <p class="text-center"><img src="{% static 'img/founder-alex.png' %}" alt="Alex" width="120" height="150" /></p>
+        <p>Alex construit des meubles; en fait il a construit son propre bar. Oh, et il brasse de la bière pour son bar!</p>
+    </div>
+    <div class="col-md-2">
+        <h4>Aaron <small>Co-Founder</small></h4>
+        <p class="text-center"><img src="{% static 'img/founder-aaron.png' %}" alt="Aaron" width="120" height="150" /></p>
+        <p>Aaron a une obsession pour les actuateurs robotiques. En fait, il a une boîte juste de pièce.</p>
     </div>
     <div class="col-md-2"></div>
 </div>
