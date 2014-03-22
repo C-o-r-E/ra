@@ -1,16 +1,22 @@
 {% extends "main/main.html" %}
 {% load staticfiles %}
 {% block content %}
-<h1 id="contact-us">Contact Us</h1>
-<h2 id="email-us">Email us</h2>
+<h1 lang="en">Contact Us</h1>
+<h1 lang="fr">Nous Contacter</h1>
+<h2 lang="en">Email us</h2>
+<h2 lang="fr">Courriel</h2>
 <p><a href="mailto:info@heliospace.ca">info@heliospace.ca</a></p>
 <h2 id="irc">IRC</h2>
 <p><a href="http://webchat.freenode.net/?channels=heliosmakerspace">#heliosmakerspace</a></p>
-<h2 id="address">Address</h2>
+<h2 lang="en">Address</h2>
+<h2 lang="fr">Addresse</h2>
 <p>137 Saint-Ferdinand Suite 270</p>
-<h2 id="alternate-entrance">Alternate Entrance</h2>
+<h2 lang="en">Alternate Entrance</h2>
+<h2 lang="fr">Autre Porte</h2>
 <p>4035 Saint-Ambroise Suite 270</p>
-<h2 id="public-transit">Public Transit</h2>
-<p>Place Saint-Henri Metro Station on the orange line.</p>
-<p><a href="https://maps.google.com/maps?saddr=Station+de+m%C3%A9tro+Place-Saint-Henri&amp;daddr=4035+St-Ambroise&amp;hl=fr&amp;ie=UTF8&amp;sll=45.477224,-73.582548&amp;sspn=0.00659,0.013937&amp;geocode=FVLttQIdPiid-yFG5qyY5IU1nCmfLNnSnRDJTDFG5qyY5IU1nA%3BFVfntQIdkD6d-ynP0tQxgxDJTDHYfxVzUg_ClQ&amp;dirflg=w&amp;mra=ltm&amp;t=m&amp;z=18"><img src="mapmetro.png" alt="Direction Map from Metro"></a></p>
+<h2 lang="en">Public Transit</h2>
+<h2 lang="fr">Transport en Commun</h2>
+<p lang="en">Place Saint-Henri Metro Station on the orange line.</p>
+<p lang="fr">Métro Place Saint-Henri sur la ligne orange.</p>
+<p><a href="https://maps.google.com/maps?saddr=Station+de+m%C3%A9tro+Place-Saint-Henri&amp;daddr=4035+St-Ambroise&amp;hl=fr&amp;ie=UTF8&amp;sll=45.477224,-73.582548&amp;sspn=0.00659,0.013937&amp;geocode=FVLttQIdPiid-yFG5qyY5IU1nCmfLNnSnRDJTDFG5qyY5IU1nA%3BFVfntQIdkD6d-ynP0tQxgxDJTDHYfxVzUg_ClQ&amp;dirflg=w&amp;mra=ltm&amp;t=m&amp;z=18"><img src="{% static 'img/mapmetro.png' %}" alt="Direction Map from Metro"></a></p>
 {% endblock %}
