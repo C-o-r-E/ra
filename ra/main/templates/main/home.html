@@ -52,38 +52,47 @@
     <div><a href="{% url 'contactPage' %}">Map &amp; Address</a></div>
     
     <h4>Donations</h4>
-    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top"><input type="hidden" name="cmd" value="_s-xclick" /> <input type="hidden" name="hosted_button_id" value="N2XUG9W7EMWFY" /> <input style="width: 80px;" type="image" name="submit" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" alt="PayPal - The safer, easier way to pay online!" align="right" /> <img src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" border="0" alt="" width="1" height="1" />
+    <div>
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <input type="hidden" name="cmd" value="_s-xclick" /> <input type="hidden" name="hosted_button_id" value="N2XUG9W7EMWFY" />
+            <input style="width: 80px;" type="image" name="submit" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" alt="PayPal - The safer, easier way to pay online!" align="right" />
+            <img src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" border="0" alt="" width="1" height="1" />
+        </form>
+    </div>
+    <div>
+        <script>
+        CoinWidgetCom.go({
+            wallet_address: "1BpzakXCVq5qhgj8DcBt3audbVnZeTQ1Sv"
+            , currency: "bitcoin"
+            , counter: "hide"
+            , alignment: "bl"
+            , qrcode: true
+            , auto_show: false
+            , lbl_button: "Donate"
+            , lbl_address: "Our Bitcoin Address:"
+            , lbl_count: "donations"
+            , lbl_amount: "BTC"
+        });
+        </script>
+    </div>
     
-    <script>
-    CoinWidgetCom.go({
-        wallet_address: "1BpzakXCVq5qhgj8DcBt3audbVnZeTQ1Sv"
-        , currency: "bitcoin"
-        , counter: "hide"
-        , alignment: "bl"
-        , qrcode: true
-        , auto_show: false
-        , lbl_button: "Donate"
-        , lbl_address: "Our Bitcoin Address:"
-        , lbl_count: "donations"
-        , lbl_amount: "BTC"
-    });
-    </script>
+    <div>
+        <script>
+        CoinWidgetCom.go({
+            wallet_address: "Lah2YBEmBMkjmR4tpxHr9nPk5qGk5ZUMz3"
+            , currency: "litecoin"
+            , counter: "hide"
+            , alignment: "bl"
+            , qrcode: true
+            , auto_show: false
+            , lbl_button: "Donate"
+            , lbl_address: "Our Litecoin Address:"
+            , lbl_count: "donations"
+            , lbl_amount: "LTC"
+        });
+        </script>
+    </div>
     
-    <script>
-    CoinWidgetCom.go({
-        wallet_address: "Lah2YBEmBMkjmR4tpxHr9nPk5qGk5ZUMz3"
-        , currency: "litecoin"
-        , counter: "hide"
-        , alignment: "bl"
-        , qrcode: true
-        , auto_show: false
-        , lbl_button: "Donate"
-        , lbl_address: "Our Litecoin Address:"
-        , lbl_count: "donations"
-        , lbl_amount: "LTC"
-    });
-    </script>
-        
 </div>
     <div lang="fr" class="col-md-2">
     <h3>Plus d'Info</h3>
