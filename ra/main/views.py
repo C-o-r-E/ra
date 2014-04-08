@@ -13,7 +13,7 @@ def usr_login(response):
     else:
         return render(response, 'main/login.html', {})
 
-@crsf_exempt
+@csrf_exempt
 def gitHook(response):
     git_thread = Thread(target=do_pull)
     git_thread.start()
