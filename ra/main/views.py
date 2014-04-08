@@ -1,11 +1,20 @@
+from threading import Thread
 from django.shortcuts import render
 
-def usr_login(request):
-    if request.user.is_authenticated():
-        return render(request, 'main/login.html', {'err':'You are already logged in!'})
+from main.hook import do_pull
+
+git_thread = None
+
+def usr_login(response):
+    if response.user.is_authenticated():
+        return render(response, 'main/login.html', {'err':'You are already logged in!'})
     else:
-        return render(request, 'main/login.html', {})
-        
+        return render(response, 'main/login.html', {})
+
+def gitHook(response):
+    git_thread = Thread(target=do_pull)
+    git_thread.start()
+    return render(response, 'main/home.html', {})
 
 def mainSite(response):
     return render(response, 'main/home.html', {})
