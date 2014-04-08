@@ -1,6 +1,8 @@
 from threading import Thread
 from django.shortcuts import render
 
+from django.views.decorators.csrf import csrf_exempt
+
 from main.hook import do_pull
 
 git_thread = None
@@ -11,6 +13,7 @@ def usr_login(response):
     else:
         return render(response, 'main/login.html', {})
 
+@crsf_exempt
 def gitHook(response):
     git_thread = Thread(target=do_pull)
     git_thread.start()
