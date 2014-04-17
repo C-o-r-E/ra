@@ -13,7 +13,7 @@ urlpatterns = patterns('',
                        url(r'^contact/$', views.contact, name='contactPage'),
                        url(r'^inventory/', include('inventory.urls')),
                        url(r'^download/$', views.download, name='downloadPage'),
-                       url(r'^boss/$', include(admin.site.urls)),
+                       url(r'^boss/', include(admin.site.urls)),
                        url(r'^ohaigithub/$', views.gitHook, name='gitHook'),
                        url(r'^login/$', views.usr_login, name="userLogin"),
 )
