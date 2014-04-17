@@ -31,5 +31,8 @@ def schedule(response):
 def membership(response):
     return render(response, 'main/membership.html', {})
 
+def download(response):
+    return render(response, 'main/download.html', {})
+
 def contact(response):
     return render(response, 'main/contact.html', {})
