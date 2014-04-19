@@ -15,6 +15,7 @@ urlpatterns = patterns('',
                        url(r'^download/$', views.download, name='downloadPage'),
                        url(r'^boss/', include(admin.site.urls)),
                        url(r'^ohaigithub/$', views.gitHook, name='gitHook'),
-                       url(r'^login/$', views.usr_login, name="userLogin"),
+                       url(r'^login/$', views.user_login, name="userLogin"),
+                       url(r'^logout/$', views.user_logout, name="userLogout"),
 )
 

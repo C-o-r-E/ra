@@ -2,6 +2,10 @@ from django.conf.urls import patterns, url
 
 from main import views
 
+#############################################
+# Note that this file is currently not used #
+#############################################
+
 urlpatterns = patterns('',
                        url(r'^$', views.mainSite, name='mainSite'),
                        url(r'^about/$', views.about, name='aboutPage'),

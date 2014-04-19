@@ -1,38 +1,66 @@
 from threading import Thread
 from django.shortcuts import render
+from django.contrib.auth import authenticate, login, logout
 
 from django.views.decorators.csrf import csrf_exempt
 
 from main.hook import do_pull
 
 git_thread = None
+#################
+# Special Stuff #
+#################
 
-def usr_login(response):
-    if response.user.is_authenticated():
-        return render(response, 'main/login.html', {'err':'You are already logged in!'})
-    else:
-        return render(response, 'main/login.html', {})
+def user_logout(request):
+    logout(request)
+    notes = ["Logged out successfully"]
+    return render(request, 'main/login.html', { 'notifications':notes })
+
+def user_login(request):
+    notes = None
+    logged_in = None
+
+    if request.method == 'POST':
+        usr = request.POST['usr']
+        pword = request.POST['pass']
+        user = authenticate(username = usr, password = pword)
+        if user is not None:
+            login(request, user)
+            return render(request, 'main/home.html', {'logged_in':True,
+                                                      'username':user.username})
+        else:
+            notes = ["Invalid login"]
+        
+    if request.user.is_authenticated:
+        logged_in = True
+
+    return render(request, 'main/login.html', { 'notifications':notes, 'logged_in':logged_in })
 
 @csrf_exempt
-def gitHook(response):
+def gitHook(request):
     git_thread = Thread(target=do_pull)
     git_thread.start()
-    return render(response, 'main/home.html', {})
+    return render(request, 'main/home.html', {})
 
-def mainSite(response):
-    return render(response, 'main/home.html', {})
+###############
+# basic pages #
+###############
 
-def about(response):
-    return render(response, 'main/about.html', {})
+def mainSite(request):
+    return render(request, 'main/home.html', {})
 
-def schedule(response):
-    return render(response, 'main/schedule.html', {})
+def about(request):
+    return render(request, 'main/about.html', {})
 
-def membership(response):
-    return render(response, 'main/membership.html', {})
+def schedule(request):
+    return render(request, 'main/schedule.html', {})
 
-def download(response):
-    return render(response, 'main/download.html', {})
+def membership(request):
+    return render(request, 'main/membership.html', {})
 
-def contact(response):
-    return render(response, 'main/contact.html', {})
+def download(request):
+    return render(request, 'main/download.html', {})
+
+def contact(request):
+    return render(request, 'main/contact.html', {})
+

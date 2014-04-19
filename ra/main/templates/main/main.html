@@ -63,6 +63,9 @@
 {% include "main/nav.html" %}
 {% endblock %}
 	  <ul class="nav navbar-nav navbar-right">
+{% if logged_in %}
+	    <li><a href="{% url 'userLogout' %}">Log out</a></li>
+{% endif %}
 	    <li lang="fr"><a href="#" id="do_en">English</a></li>
 	    <li lang="en"><a href="#" id="do_fr">Fran&ccedil;ais</a></li>
 	  </ul>
