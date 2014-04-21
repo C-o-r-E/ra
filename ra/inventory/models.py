@@ -19,3 +19,13 @@ class InventoryEvent(models.Model):
 
     def __unicode__(self):
         return "Event:" + self.date
+
+class IMGFile(models.Model):
+    name = models.CharField(max_length=100)
+    item = models.ForeignKey(InventoryItem)
+    file_size = models.IntegerField(default=0)
+    full_path = models.CharField(max_length=200)
+    the_file = models.FileField(upload_to='images/')
+
+    def __unicode__(self):
+        return self.name

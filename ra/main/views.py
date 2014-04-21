@@ -18,7 +18,7 @@ def user_logout(request):
 
 def user_login(request):
     notes = None
-    logged_in = None
+    logged_in = False
 
     if request.method == 'POST':
         usr = request.POST['usr']
@@ -31,7 +31,7 @@ def user_login(request):
         else:
             notes = ["Invalid login"]
         
-    if request.user.is_authenticated:
+    if request.user.is_authenticated():
         logged_in = True
 
     return render(request, 'main/login.html', { 'notifications':notes, 'logged_in':logged_in })
