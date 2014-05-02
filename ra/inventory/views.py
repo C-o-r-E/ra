@@ -19,6 +19,7 @@ def item_details(request, item_id):
     logged_in = False
     form = None
     inv_item = get_object_or_404(InventoryItem, pk=item_id)
+    images = IMGFile.objects.filter(item=item_id)
     
     if request.user.is_authenticated():
         logged_in = True
@@ -37,6 +38,7 @@ def item_details(request, item_id):
     
     return render(request, 'inventory/item.html', {
             'item':inv_item,
+            'images':images,
             'item_id':item_id,
             'logged_in':logged_in,
             'form':form})    
