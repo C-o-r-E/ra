@@ -64,3 +64,8 @@ def download(request):
 def contact(request):
     return render(request, 'main/contact.html', {})
 
+def absolut(request):
+    return render(request, 'main/absolut.html', {})
+
+
+
