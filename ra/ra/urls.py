@@ -17,5 +17,7 @@ urlpatterns = patterns('',
                        url(r'^ohaigithub/$', views.gitHook, name='gitHook'),
                        url(r'^login/$', views.user_login, name="userLogin"),
                        url(r'^logout/$', views.user_logout, name="userLogout"),
+                       url(r'^absolut/$', views.absolut, name="absolutPage"),
+
 )
 

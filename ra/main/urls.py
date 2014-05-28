@@ -14,7 +14,6 @@ urlpatterns = patterns('',
                        url(r'^download/$', views.download, name='downloadPage'),
                        url(r'^contact/$', views.contact, name='contactPage'),
                        
-                       url(r'^absolut/$', views.absolut, name='absolutPage'),
 #                       url(r'^$', views.mainSite, name='mainSite'),
 #                       url(r'^$', views.mainSite, name='mainSite'),
 )
