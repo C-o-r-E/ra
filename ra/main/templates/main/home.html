@@ -105,12 +105,60 @@
 <div class="row">
 <div lang="en" class="col-md-2">
     <h3>More Info</h3>
-
-    <div><a href="{% url 'inventoryList' %}">Tools List and Workshop</a></div>
-    <div><a href="{% url 'schedulePage' %}">Schedule</a></div>
-    <div><a href="{% url 'membershipPage' %}">Membership</a></div>
-    <div><a href="{% url 'contactPage' %}">Map &amp; Address</a></div>
+    <div><a href="https://docs.google.com/forms/d/1toEcKBOeSHtZA_pbmV4mn51cbfy8qzzTyuFIESMF7xU/viewform" target="_blank">What should be our next tutorial</a></div>
+    <div><a href="https://docs.google.com/forms/d/1QSnJyl8VxH7R8fKJQMMtOmp8rahN8D_HNROiHQWHSnE/viewform" target="_blank">Volunteering at Helios Makerspace</a></div>
+</div>
+<div lang="fr" class="col-md-2">
+    <h3>Plus d'Info</h3>
+    <div><a href="https://docs.google.com/forms/d/1toEcKBOeSHtZA_pbmV4mn51cbfy8qzzTyuFIESMF7xU/viewform" target="_blank">Suggérer le prochain atelier</a></div>
+    <div><a href="https://docs.google.com/forms/d/1QSnJyl8VxH7R8fKJQMMtOmp8rahN8D_HNROiHQWHSnE/viewform" target="_blank">Bénévolat à Helios Makerspace</a></div>
+</div>
     
+<div lang="en" class="col-md-2">
+    <h3>Hours</h3>
+    <div>Wednesday: 1PM-9PM</div>
+    <div>Thursday: 1PM-9PM</div>
+    <div>Friday: 2PM-9PM</div>
+    <div>Saturday: 1PM-8PM</div>
+    <h4>Community Night</h4>
+    <div>Thursday 4PM-9PM (Free)</div>
+</div>
+<div lang="fr" class="col-md-2">
+    <h3>Horaire</h3>
+    <div>Mercredi : 13h-21h</div>
+    <div>Jeudi: 13h-21h</div>
+    <div>Vendredi: 14h-21h</div>
+    <div>Samedi: 13h-20h</div>
+    <h4>Soirée Communautaire</h4>
+    <div>Jeudi 16h-21h (Gratuit)</div>
+</div>
+    
+<div class="col-md-2">
+    <h3 lang="en">Follow Us</h3>
+    <h3 lang="fr">Nous Suivre</h3> 
+    <div><a href="https://www.facebook.com/heliosmakerspace">Facebook</a></div>
+    <div><a href="http://www.youtube.com/channel/UCG9hdnqehOrva9maMjFi15Q">Youtube</a></div>
+    <div><a href="https://plus.google.com/+HeliosMakerspace/posts">Google+</a></div>
+    <div><a href="https://twitter.com/heliosmakers">Twitter</a></div>
+    <div><a href="http://webchat.freenode.net/?channels=heliosmakerspace">IRC</a></div>
+</div>
+<div class="col-md-2">
+    <h3 lang="en">Contact</h3>
+    <h3 lang="fr">Nous Contacter</h3>
+    <div>info@heliospace.ca</div>
+    <div>137 Saint-Ferdinand</div>
+    <div>Suite 270</div>
+    <div>Montreal, QC, H4C 2S6</div>
+    <div>Canada</div>
+    <div>(Metro Place-Saint-Henri)</div>
+</div>
+
+<div lang="en"class="col-md-4">
+    <h3>Newsletter</h3>
+    <form action="http://heliospace.us7.list-manage.com/subscribe/post?u=1905f8d3301878e38c708d44a&amp;id=775d18aa4f" method="post">
+    <p><input name="EMAIL" type="email" class="form-control input" placeholder="Email address"></p>
+    <p><input id="mc-embedded-subscribe" class="form-control btn btn-primary" name="subscribe" value="Subscribe to Helios' Newsletter" type="submit"></p>
+    </form>
     <h4>Donations</h4>
     <div>
         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
@@ -135,7 +183,6 @@
         });
         </script>
     </div>
-    
     <div>
         <script>
         CoinWidgetCom.go({
@@ -152,16 +199,14 @@
         });
         </script>
     </div>
-    
 </div>
-    <div lang="fr" class="col-md-2">
-    <h3>Plus d'Info</h3>
 
-    <div><a href="{% url 'inventoryList' %}">L'atelier et les Outils</a></div>
-    <div><a href="{% url 'schedulePage' %}">Horaire</a></div>
-    <div><a href="{% url 'membershipPage' %}">Être Membre</a></div>
-    <div><a href="{% url 'contactPage' %}">Carte &amp; Adresse</a></div>
-        
+<div lang="fr"class="col-md-4">
+    <h3>Bulletin</h3>
+    <form action="http://heliospace.us7.list-manage.com/subscribe/post?u=1905f8d3301878e38c708d44a&amp;id=775d18aa4f" method="post">
+    <p><input name="EMAIL" type="email" class="form-control input" placeholder="Courriel"></p>
+    <p><input id="mc-embedded-subscribe" class="form-control btn btn-primary" name="subscribe" value="S'inscrire au Bulletin" type="submit"></p>
+    </form>
     <h4>Dons</h4>
     <div>
         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
@@ -179,7 +224,7 @@
             , alignment: "bl"
             , qrcode: true
             , auto_show: false
-            , lbl_button: "Faire Contribution"
+            , lbl_button: "Don"
             , lbl_address: "Notre Addresse Bitcoin:"
             , lbl_count: "donations"
             , lbl_amount: "BTC"
@@ -193,75 +238,13 @@
             , alignment: "bl"
             , qrcode: true
             , auto_show: false
-            , lbl_button: "Faire Contribution"
+            , lbl_button: "Don"
             , lbl_address: "Notre Addresse Litecoin:"
             , lbl_count: "donations"
             , lbl_amount: "LTC"
         });
         </script>
     </div>
-</div>
-    
-<div lang="en" class="col-md-2">
-    <h3>Hours</h3>
-
-    <div>Wednesday: 1PM-9PM</div>
-    <div>Thursday: 1PM-9PM</div>
-    <div>Friday: 2PM-9PM</div>
-    <div>Saturday: 1PM-8PM</div>
-    <h4>Community Night</h4>
-    <div>Thursday 4PM-9PM (Free)</div>
-</div>
-    <div lang="fr" class="col-md-2">
-    <h3>Horaire</h3>
-
-    <div>Mercredi : 13h-21h</div>
-    <div>Jeudi: 13h-21h</div>
-    <div>Vendredi: 14h-21h</div>
-    <div>Samedi: 13h-20h</div>
-    <h4>Soirée Communautaire</h4>
-    <div>Jeudi 16h-21h (Gratuit)</div>
-</div>
-    
-<div class="col-md-2">
-    <h3 lang="en">Follow Us</h3>
-    <h3 lang="fr">Nous Suivre</h3>
-    
-    <div><a href="https://www.facebook.com/heliosmakerspace">Facebook</a></div>
-    <div><a href="http://www.youtube.com/channel/UCG9hdnqehOrva9maMjFi15Q">Youtube</a></div>
-    <div><a href="https://plus.google.com/+HeliosMakerspace/posts">Google+</a></div>
-    <div><a href="https://twitter.com/heliosmakers">Twitter</a></div>
-    <div><a href="http://webchat.freenode.net/?channels=heliosmakerspace">IRC</a></div>
-</div>
-<div class="col-md-2">
-    <h3 lang="en">Contact</h3>
-    <h3 lang="fr">Nous Contacter</h3>
-
-    <div>info@heliospace.ca</div>
-    <div>4035 Saint-Ambroise</div>
-    <div>Suite 270</div>
-    <div>Montreal, QC, H4C 2S6</div>
-    <div>Canada</div>
-    <div>(Metro Place-Saint-Henri)</div>
-</div>
-<div lang="en"class="col-md-4">
-    <h3>Newsletter</h3>
-
-    <form action="http://heliospace.us7.list-manage.com/subscribe/post?u=1905f8d3301878e38c708d44a&amp;id=775d18aa4f" method="post">
-    <p><input name="EMAIL" type="email" class="form-control input" placeholder="Email address"></p>
-    <p><input id="mc-embedded-subscribe" class="form-control btn btn-primary" name="subscribe" value="Subscribe to Helios' Newsletter" type="submit"></p>
-    </form>
-
-</div>
-
-<div lang="fr"class="col-md-4">
-    <h3>Bulletin</h3>
-
-    <form action="http://heliospace.us7.list-manage.com/subscribe/post?u=1905f8d3301878e38c708d44a&amp;id=775d18aa4f" method="post">
-    <p><input name="EMAIL" type="email" class="form-control input" placeholder="Courriel"></p>
-    <p><input id="mc-embedded-subscribe" class="form-control btn btn-primary" name="subscribe" value="S'inscrire au Bulletin" type="submit"></p>
-    </form>
-
 </div>
 
 </div>
