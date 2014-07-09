@@ -7,6 +7,7 @@ from django.views.decorators.csrf import csrf_exempt
 from main.hook import do_pull
 
 git_thread = None
+
 #################
 # Special Stuff #
 #################
@@ -42,27 +43,36 @@ def gitHook(request):
     git_thread.start()
     return render(request, 'main/home.html', {})
 
+####################
+# Helper functions #
+####################
+
+def ra_render(req, template, etc_dict):
+    if req.user.is_authenticated():
+        etc_dict['logged_in'] = True
+    return render(req, temlpate, etc_dict)
+
 ###############
 # basic pages #
 ###############
 
 def mainSite(request):
-    return render(request, 'main/home.html', {})
+    return ra_render(request, 'main/home.html', {})
 
 def about(request):
-    return render(request, 'main/about.html', {})
+    return ra_render(request, 'main/about.html', {})
 
 def schedule(request):
-    return render(request, 'main/schedule.html', {})
+    return ra_render(request, 'main/schedule.html', {})
 
 def membership(request):
-    return render(request, 'main/membership.html', {})
+    return ra_render(request, 'main/membership.html', {})
 
 def download(request):
-    return render(request, 'main/download.html', {})
+    return ra_render(request, 'main/download.html', {})
 
 def contact(request):
-    return render(request, 'main/contact.html', {})
+    return ra_render(request, 'main/contact.html', {})
 
 def absolut(request):
     return render(request, 'main/absolut.html', {})
