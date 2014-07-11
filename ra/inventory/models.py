@@ -1,4 +1,5 @@
 from django.db import models
+from members.models import Member
 
 class InventoryItem(models.Model):
     serial_number = models.CharField(max_length=200)
@@ -7,6 +8,8 @@ class InventoryItem(models.Model):
     date_added = models.DateTimeField()
     last_updated = models.DateTimeField()
     description = models.CharField(max_length=200)
+    
+    owner = models.ForeignKey(Member, blank=True, null=True)
 
     def __unicode__(self):
         return self.name
