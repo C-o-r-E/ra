@@ -50,7 +50,7 @@ def gitHook(request):
 def ra_render(req, template, etc_dict):
     if req.user.is_authenticated():
         etc_dict['logged_in'] = True
-    return render(req, temlpate, etc_dict)
+    return render(req, template, etc_dict)
 
 ###############
 # basic pages #
