@@ -1,4 +1,4 @@
-{% extends "main/main.html" %}
+﻿{% extends "main/main.html" %}
 {% load staticfiles %}
 {% block content %}
 
@@ -93,8 +93,8 @@
     </ul>
     <h2 lang="en">Membership Rate</h2>
     <h2 lang="fr">Devenir Membre</h2>
-    <p lang="en">Starting from 42.00$/month</p>
-    <p lang="fr">À partir de 42.00$/mois</p>
+    <p lang="en">Starting from <a href="{% url 'membershipPage' %}">42.00$/month</a></p>
+    <p lang="fr">À partir de <a href="{% url 'membershipPage' %}">42.00$/mois</a></p>
     <p lang="en">Our mission is to provide access to the community to a space and tools. You can be an artist, a student, a hobbyist, an entrepreneur, everybody is welcome to become a member.</p>
     <p lang="fr">Notre mission est de donner l'accès à la communauté à un espace et des outils. Un membre peut être un artiste, un étudiant, un hobbyiste, un entrepreneur; c'est vraiment un espace ouvert à tous!</p>
 
