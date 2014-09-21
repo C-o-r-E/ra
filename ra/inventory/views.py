@@ -2,6 +2,8 @@ from django.shortcuts import get_object_or_404, render
 from inventory.models import InventoryItem, InventoryEvent, IMGFile
 from inventory.forms import IMGForm
 
+from django.http import HttpResponse
+
 from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.clickjacking import xframe_options_exempt
 
@@ -15,6 +17,7 @@ def inventory(request):
 
     return render(request, 'inventory/inventory.html', {'item_list' : itemList, 'logged_in' : logged_in})
 
+@xframe_options_exempt
 @csrf_exempt
 def item_details(request, item_id):
     logged_in = False
