@@ -3,8 +3,9 @@ from inventory.models import InventoryItem, InventoryEvent, IMGFile
 from inventory.forms import IMGForm
 
 from django.views.decorators.csrf import csrf_exempt
+from django.views.decorators.clickjacking import xframe_options_exempt
 
-
+@xframe_options_exempt
 def inventory(request):
     logged_in = False
     itemList = InventoryItem.objects.all()
