@@ -1,4 +1,54 @@
-{#  {% extends "main/main.html" %} #}
+<!DOCTYPE html>{% load staticfiles %}
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Helios Makerspace</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="{% static "css/bootstrap.css" %}" />
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script type="text/javascript" src="{% static "js/bootstrap.js" %}"></script>
+  <script lang="javascript">
+  $(function() {
+    function go_en() {
+      $(":lang(en)").show();
+      $(":lang(fr)").hide();
+      document.cookie = "lang_pref=en; expires=Wed, 07 Sep 2039 11:47:35 GMT; path=/"
+    }
+    function go_fr() {
+      $(":lang(en)").hide();
+      $(":lang(fr)").show();
+      document.cookie = "lang_pref=fr; expires=Wed, 07 Sep 2039 11:47:35 GMT; path=/"
+    }
+
+    $("#do_en").click(go_en);
+    $("#do_fr").click(go_fr);
+
+    if (document.cookie.match(/lang_pref=en/)) {
+      go_en();
+    } else {
+      go_fr();
+    }
+  });
+  </script>
+  <style type="text/css">
+  .navbar-static-top {
+  margin-bottom: 19px;
+  }
+  </style>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-42411575-1', 'heliospace.ca');
+    ga('send', 'pageview');
+
+</script>
+</head>
+<body>
+
+<!-- {#  {% extends "main/main.html" %} #} -->
 {% load staticfiles %}
 {% block content %}
 
