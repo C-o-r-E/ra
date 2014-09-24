@@ -1,4 +1,5 @@
 from django.db import models
+from django.forms import ModelForm
 
 class MemberType(models.Model):
     name = models.CharField(max_length=200)
@@ -43,3 +44,10 @@ class Membership(models.Model):
     start_date = models.DateField()
     expire_date = models.DateField()
 
+class MemberForm(ModelForm):
+    class Meta:
+        model = Member
+        fields = ['type', 'first_name', 'last_name',
+                  'birth_date', 'address', 'city',
+                  'postal_code', 'phone_number', 'email',
+                  'emergency_contact', 'emergency_phone_number']

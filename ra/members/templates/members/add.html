@@ -1,0 +1,28 @@
+{% extends "main/main.html" %}
+{% load staticfiles %}
+{% block content %}
+
+<h1>Add a new member</h1>
+
+<!--
+<form role="form">
+  <div class="form-group">
+    <label for="fname">First Name</label>
+    <input type="text" class="form-control" id="fname" placeholder="Enter first name">
+    <label for="lname">Last Name</label>
+    <input type="text" class="form-control" id="lname" placeholder="Enter last name">
+  </div>
+</form>
+-->
+
+<form class="form-horizontal" role="form" action="#" method="post"> {% csrf_token %}
+  {% for field in mem_form %}
+  <div class="form-group">
+	 {{ field.errors }}
+	 {{ field.label_tag }} {{ field }}
+  </div>
+	 {% endfor %}
+	 <input type="submit" value="Submit" />
+</form>
+
+{% endblock %}
