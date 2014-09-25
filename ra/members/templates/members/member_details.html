@@ -138,6 +138,8 @@
   </tbody>
 </table>
 
+<a class="btn btn-default" href="{% url 'editDetails' member.pk %}">Edit Member Details</a>
+
 {% else %}
 
 Member does not exist.
@@ -145,3 +147,4 @@ Member does not exist.
 {% endif %}
 
 {% endblock %}
+

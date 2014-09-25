@@ -18,7 +18,7 @@
     {% for mem in member_list %}
     <tr>
       <td>{{mem.number}}</td>
-      <td><a href="{% url 'itemDetails' mem.pk %}">{{mem.first_name}}</a></td>
+      <td><a href="{% url 'memberDetails' mem.pk %}">{{mem.first_name}}</a></td>
       <td>{{mem.last_name}}</td>
     </tr>
       {% endfor %}
@@ -28,6 +28,6 @@
 No members...
 {% endif %}
 
-<a class="btn btn-default" href="add/">Add new member</a>
+<a class="btn btn-default" href="{% url 'addMember' %}">Add new member</a>
 
 {% endblock %}

@@ -24,6 +24,31 @@ def memberDetails(request, member_id):
 
     return render(request, 'members/member_details.html', {'member': member, 'logged_in': logged_in})
 
+def editDetails(request, member_id):
+    if not request.user.is_authenticated():
+        return render(request, 'main/home.html', {})
+
+    if request.method == 'POST':
+        memForm = MemberForm(request.POST)
+        if memForm.is_valid():
+            editedMember = memForm.save(commit=False)
+            actualMember = get_object_or_404(Member, pk=member_id)
+            editedMember.number = actualMember.number
+            editedMember.pk = actualMember.pk
+            editedMember.first_seen_date = actualMember.first_seen_date
+            editedMember.last_seen_date = actualMember.first_seen_date
+            editedMember.save()
+            #return HttpResponseRedirect('../')
+            return members(request)
+
+    else:
+        logged_in = True
+        member = get_object_or_404(Member, pk=member_id)
+        memForm = MemberForm(instance=member)
+
+
+    return render(request, 'members/editDetails.html', {'member': member, 'member_form': memForm, 'logged_in': logged_in})
+
 def addMember(request):
     if not request.user.is_authenticated():
         return render(request, 'main/home.html', {})
