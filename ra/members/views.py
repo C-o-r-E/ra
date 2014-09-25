@@ -1,5 +1,5 @@
 from members.models import Member, MemberForm
-from django.shortcuts import render
+from django.shortcuts import get_object_or_404, render
 from django.http import HttpResponseRedirect
 
 import datetime
@@ -13,6 +13,16 @@ def members(request):
     memberList = Member.objects.all()
 
     return render(request, 'members/members.html', {'member_list': memberList, 'logged_in': logged_in})
+
+def memberDetails(request, member_id):
+    if not request.user.is_authenticated():
+        return render(request, 'main/home.html', {})
+
+    logged_in = True
+    member = get_object_or_404(Member, pk=member_id)
+
+
+    return render(request, 'members/member_details.html', {'member': member, 'logged_in': logged_in})
 
 def addMember(request):
     if not request.user.is_authenticated():
