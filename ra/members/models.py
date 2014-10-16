@@ -44,6 +44,11 @@ class Membership(models.Model):
     start_date = models.DateField()
     expire_date = models.DateField()
 
+    def is_expired(self):
+        if datetime.today() > self.expire_date:
+            return True
+        return False
+
 class MemberForm(ModelForm):
     class Meta:
         model = Member

@@ -1,4 +1,4 @@
-from members.models import Member, MemberForm
+from members.models import Member, MemberForm, Membership
 from django.shortcuts import get_object_or_404, render
 from django.http import HttpResponseRedirect
 
@@ -70,3 +70,18 @@ def addMember(request):
     
     
     return render(request, 'members/add.html', {'mem_form': memForm, 'logged_in': logged_in})
+
+
+def memberships(request):
+    if not request.user.is_authenticated():
+        return render(request, 'main/home.html', {})
+
+    logged_in = True
+    membershipList = Membership.objects.all()
+
+    if request.method == 'GET' and request.GET.has_key('show'):
+        if request.GET['show'] == 'expired':
+            membershipList = Membership.objects.filter(expire_date__lt = datetime.datetime.today())
+        elif request.GET['show'] == 'active':
+            membershipList = Membership.objects.filter(expire_date__gte = datetime.datetime.today())
+    return render(request, 'members/memberships.html', {'membership_list': membershipList, 'logged_in': logged_in})
